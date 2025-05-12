@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Pop Queens 🎤</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #fddbea; /* Light pink background */
+            background-image: url('C:/Users/noura/Downloads/web.html/.vscode/.vscode/download.jpeg'); /* Updated with the correct image path */
+            background-size: cover; /* Ensures the image covers the entire page */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Keeps the background fixed during scrolling */
+            font-family: 'Cursive', sans-serif; /* Changes the font to cursive */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, p, button {
+            font-family: 'Cursive', sans-serif; /* Ensures all text elements use the cursive font */
+        }
+
+        /* Menu styling */
+        .menu { display: block;
+            text-align: center;
+           
+            background-color: #f8bed5;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+            
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Artist card styling */
+        .artist-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px; /* Adds spacing between artist cards */
+            margin-top: 20px;
+        }
+
+        .artist-card {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adds a light background to the cards */
+            width: 300px; /* Sets a fixed width for the cards */
+        }
+
+        .artist-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px; /* Adds spacing between the image and the description */
+        }
+
+        .artist-card button {
+            margin-top: 10px; /* Adds spacing between the description and the button */
+            padding: 10px 20px;
+            background-color: #c2185b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .artist-card button:hover {
+            background-color: #a3154a;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div class="menu">
+        <a href="#ariana">Ariana Grande</a>
+        <a href="#taylor">Taylor Swift</a>
+        <a href="#sabrina">Sabrina Carpenter</a>
+        <a href="#mariah">Mariah Carey</a>
+    </div>
+
+    <h1>My Favorite Pop Queens 💖</h1>
+    <div class="artist-container">
+        <div class="artist-card" id="ariana">
+            <img src="• 𝐀𝐫𝐢𝐚𝐧𝐚 𝐆𝐫𝐚𝐧𝐝𝐞 •.jpeg" alt="Ariana Grande smiling, showcasing her iconic style and elegance.">
+            <h2>Ariana Grande</h2>
+            <p id="desc-ariana">The queen of high notes and dreamy vibes 💕</p>
+            <button onclick="changeDesc('ariana')">Change Description</button>
+        </div>
+
+        <div class="artist-card" id="taylor">
+            <img src="THE MAN.jpeg" alt="Taylor Swift">
+            <h2>Taylor Swift</h2>
+            <p id="desc-taylor">The storyteller of our hearts ✨</p>
+            <button onclick="changeDesc('taylor')">Change Description</button>
+        </div>
+
+        <div class="artist-card" id="sabrina">
+            <img src="sabrina carpenter icon 🎀.jpeg" alt="Sabrina Carpenter smiling warmly, wearing a stylish outfit with a soft and elegant tone. The background is dark, emphasizing her presence and creating a glamorous atmosphere.">
+            <h2>Sabrina Carpenter</h2>
+            <p id="desc-sabrina">The rising pop princess 🌟</p>
+            <button onclick="changeDesc('sabrina')">Change Description</button>
+        </div>
+
+        <div class="artist-card" id="mariah">
+            <img src="Mariah Carey circa 1990.jpeg" alt="Mariah Carey posing elegantly, showcasing her iconic style and grace.">
+            <h2>Mariah Carey</h2>
+            <p id="desc-mariah">The legendary diva of vocals and holiday magic 🎄</p>
+            <button onclick="changeDesc('mariah')">Change Description</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
