@@ -1,15 +1,31 @@
-// Function to show the welcome message immediately when the page loads
-window.onload = function() {
-    alert("Welcome Girlie 💖");
-    // Alternatively, you can also display the message in a specific element on the page.
+window.onload = function () {
+    const hour = new Date().getHours();
+    let greeting = "";
+
+    if (hour >= 5 && hour < 12) {
+        greeting = "Good morning girlie 💐";
+    } else if (hour >= 12 && hour < 18) {
+        greeting = "Good afternoon girlie ☀️";
+    } else if (hour >= 18 && hour < 23) {
+        greeting = "Good evening girlie 🌆";
+    } else {
+        greeting = "Good night girlie 🌙";
+    }
+
+    // Show as alert
+    alert(greeting);
+
+    // Also show on the page
     const welcomeMessage = document.createElement("div");
     welcomeMessage.style.textAlign = "center";
     welcomeMessage.style.fontSize = "2rem";
     welcomeMessage.style.color = "#c2185b";
-    welcomeMessage.textContent = "Welcome Girlie 💖";
-    document.body.appendChild(welcomeMessage);
-}
+    welcomeMessage.style.marginTop = "20px";
+    welcomeMessage.textContent = greeting;
+    document.body.insertBefore(welcomeMessage, document.body.firstChild);
+};
 
+// Function to change the description of an artist
 function changeDesc(artist) {
     const descriptions = {
         ariana: [
@@ -30,7 +46,14 @@ function changeDesc(artist) {
         ]
     };
 
+    // Get the description element for the artist
     const desc = document.getElementById(`desc-${artist}`);
+    if (!desc) {
+        console.error(`Element with id 'desc-${artist}' not found.`);
+        return;
+    }
+
+    // Toggle between the two descriptions
     const current = desc.textContent;
     const options = descriptions[artist];
     desc.textContent = current === options[0] ? options[1] : options[0];
